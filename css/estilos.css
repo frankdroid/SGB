@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+h1 { font-size:16px}
+
+h2 { font-size:14px}
+
+#header { 
+	background-image:url(../img/header.png);
+	background-repeat: no-repeat;
+	width: 900px;
+	margin: 0 auto 0 auto;
+	height: 75px;
+	text-align:right;
+	font-size:11px;
+	font-weight:bold;	
+	color:#333
+
+}
+
+#fondo {
+	background-image: url(../img/fondo-app.png);
+	width: 900px;
+	margin: 0 auto 0 auto;
+}
+
+#fondo2 {
+	background-image: url(../img/fondo-app.jpg);
+	width: 900px;
+	height:700px;
+	margin: 0 auto 0 auto;
+}
+
+.fondo_view {
+	background-image: url(../img/fondo-view.jpg);
+}
+
+#footer {
+	background-image:url(../img/footer.png);
+	height:20px;
+	width:900px;
+	margin: -12px auto 0px auto;
+}
+
+input[type="text"],input[type="number"], select, textarea, [type="password"] {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    border-radius: 4px 4px 4px 4px;
+    color:#666;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 10px;
+    padding: 2px 2px;
+    vertical-align: middle;
+}
+input[type="text"]:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    outline: 0 none;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(82,168,236,.6);
+    -moz-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(82,168,236,.6);
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(82,168,236,.6);
+}
+
+form label.error {
+	float: left;
+	color: red;
+	font-weight: normal;
+	padding-left: .5em;
+	vertical-align: top;
+}
+input.error { border: 1px dotted red; }
+
+.tds { border-bottom: #CCC thin solid }
+
+.tablas { width:95%; margin: 0 auto; }
+
+.campos_ver {
+	background-color: #DDE3E6
+}

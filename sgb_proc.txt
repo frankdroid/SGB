@@ -1,0 +1,18 @@
+CREATE DEFINER=`root`@`localhost` EVENT `Revision de Morosos` ON SCHEDULE EVERY 1 DAY STARTS '2013-12-01 00:00:00' ON COMPLETION NOT PRESERVE ENABLE DO CALL Revisio_Morosos()
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Revision_Morosos`()
+BEGIN
+
+
+UPDATE miembros as m
+  JOIN prestamos as p
+  on m.id_miembro = p.id_miembro AND p.fec_dev < CURDATE()
+  SET m.estado = 'MOROSO';
+
+INSERT INTO auditoria SET
+    modificado = DATE( NOW( ) ),
+    id_usuario = 3,
+    descripcion = 'Modificación',
+    nombre_tabla = 'Miembros';
+
+END
